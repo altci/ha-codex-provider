@@ -1,0 +1,17 @@
+{
+  "domain": "codex_provider",
+  "name": "Codex Provider",
+  "codeowners": [
+    "@altci"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "ai_task"
+  ],
+  "documentation": "https://github.com/altci/ha-codex-provider",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/altci/ha-codex-provider/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

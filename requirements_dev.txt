@@ -1,3 +1,12 @@
 -r requirements_lint.txt
 colorlog==6.10.1
-homeassistant==2026.6.4
+homeassistant==2026.10.0
+pytest-homeassistant-custom-component==0.13.371
+aioresponses==0.7.9
+
+# Core conversation dependencies imported by the AI Task platform
+gazetteer-matcher==1.1.0
+hassil==3.12.1
+home-assistant-intents==2026.10.6
+# Core AI Task imports camera types even for text-only tasks
+PyTurboJPEG==1.8.3
