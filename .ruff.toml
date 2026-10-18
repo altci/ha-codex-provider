@@ -1,6 +1,7 @@
 # The contents of this file is based on https://github.com/home-assistant/core/blob/dev/pyproject.toml
 
 target-version = "py314"
+exclude = ["work"]
 
 [lint]
 select = [
@@ -8,6 +9,9 @@ select = [
 ]
 
 ignore = [
+    "EM101", # Local safe error strings are clearer at their raise sites
+    "EM102",
+    "TRY003", # Home Assistant service errors use contextual messages
     "ANN401", # Dynamically typed expressions (typing.Any) are disallowed
     "D203", # no-blank-line-before-class (incompatible with formatter)
     "D212", # multi-line-summary-first-line (incompatible with formatter)
@@ -23,3 +27,6 @@ keep-runtime-typing = true
 
 [lint.mccabe]
 max-complexity = 25
+
+[lint.per-file-ignores]
+"tests/*" = ["ANN", "ARG001", "PLR2004", "S101", "S105", "SLF001", "PLR0913"]

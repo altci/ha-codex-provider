@@ -1,0 +1,44 @@
+{
+  "title": "Codex Provider",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Codex Provider",
+        "description": "Supply your own OAuth client identity. Initial setup and identity changes require ChatGPT device authorization. Model-only changes reuse your existing credentials. The model must support HTTP/SSE Codex Responses.",
+        "data": {
+          "client_id": "OAuth client ID",
+          "originator": "Originator header",
+          "user_agent": "User-Agent header",
+          "model": "Model"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in to ChatGPT again",
+        "description": "Review your client identity and authorize a new device code."
+      }
+    },
+    "progress": {
+      "authorize": "Open [{url}]({url}) and enter **{code}** to sign in to ChatGPT. Waiting for approval (up to 10 minutes). Cancel this dialog to stop polling."
+    },
+    "error": {
+      "invalid_identity": "Supply non-empty ASCII identity values without leading/trailing whitespace or control characters.",
+      "invalid_model": "Supply a non-empty model identifier.",
+      "cannot_connect": "Unable to contact the provider. Check your connection and try again.",
+      "invalid_response": "The provider returned an unexpected response. Check the supported model and report persistent failures.",
+      "invalid_auth": "The provider rejected authorization. Check your client identity and sign in again.",
+      "access_denied": "Authorization was denied. Start again to sign in.",
+      "login_expired": "Device authorization expired. Start again to receive a new code."
+    },
+    "abort": {
+      "invalid_identity": "Supply non-empty ASCII identity values without leading/trailing whitespace or control characters.",
+      "invalid_model": "Supply a non-empty model identifier.",
+      "cannot_connect": "Unable to contact the provider. Check your connection and try again.",
+      "invalid_response": "The provider returned an unexpected response. Check the supported model and report persistent failures.",
+      "invalid_auth": "The provider rejected authorization. Check your client identity and sign in again.",
+      "access_denied": "Authorization was denied. Start again to sign in.",
+      "login_expired": "Device authorization expired. Start again to receive a new code.",
+      "reauth_successful": "Authorization updated.",
+      "reconfigure_successful": "Configuration updated."
+    }
+  }
+}
