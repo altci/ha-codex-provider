@@ -16,5 +16,8 @@ jobs:
         with:
           python-version: "3.14"
           cache: pip
+          cache-dependency-path: |
+            requirements_dev.txt
+            requirements_lint.txt
       - run: python -m pip install -r requirements_dev.txt
       - run: python -m pytest -q
